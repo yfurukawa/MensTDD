@@ -11,6 +11,7 @@ public:
 	virtual ~ToDoList();
 	void add(ToDo* todo);
 	int getNumberOfIssues();
+	ToDo* showLastToDo();
 private:
 	std::vector<ToDo*> issues_;
 };

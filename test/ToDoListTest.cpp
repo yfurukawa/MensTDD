@@ -28,3 +28,8 @@ TEST_F (ToDoListTest, AddTwoToDo) {
 	EXPECT_EQ(2, sut->getNumberOfIssues());
 }
 
+TEST_F (ToDoListTest, ShowLastToDo) {
+	sut->add(new ToDo("ToDo1", "Do Something", "2013-12-01", "2013-11-24"));
+	sut->add(new ToDo("ToDo2", "Do Something", "2013-12-01", "2013-11-24"));
+	EXPECT_EQ("ToDo2", sut->showLastToDo()->getName());
+}

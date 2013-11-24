@@ -19,3 +19,7 @@ void ToDoList::add(ToDo* todo) {
 int ToDoList::getNumberOfIssues() {
 	return issues_.size();
 }
+
+ToDo* ToDoList::showLastToDo() {
+	return issues_.back();
+}
