@@ -24,8 +24,8 @@ TEST_INCLUDE = -I../test -I.
 TEST_LIB = -lgtest
 TEST_OPT = -O0 -g3 -Wall -fmessage-length=0 -pg -fprofile-arcs -ftest-coverage
 TEST_SRC = ../test/testMain.cpp ../test/ToDoTest.cpp ../test/ToDoListTest.cpp ../test/CommandExecutorTest.cpp \
-../test/CommandTest.cpp
-TEST_OBJ = testMain.o ToDoTest.o ToDoListTest.o CommandExecutorTest.o CommandTest.o
+../test/CommandTest.cpp ../test/CommandExecutorSpy.cpp
+TEST_OBJ = testMain.o ToDoTest.o ToDoListTest.o CommandExecutorTest.o CommandTest.o CommandExecutorSpy.o
 
 test: $(OBJ) $(TEST_OBJ)
 	$(CC) $(INCLUDE) $(TEST_INCLUDE) $(LIB_DIR) $(TEST_OPT) -o $(TEST_TARGET) $(OBJ) $(TEST_OBJ) $(LIB) $(TEST_LIB)
